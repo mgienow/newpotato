@@ -1,26 +1,204 @@
 body {
   font-family: 'Open Sans', Arial, sans-serif;
+  text-align: center;
+
 }
 
-h1, h2, h3, h4, h5, h6, ul, li, p {
+body, h1, h2, h3, h4, h5, h6, ul, li, p {
   margin: 0;
   padding: 0;
+}
+body > h1 {
+  padding-top: 2em;
 }
 
 /*  ====== HEADER/NAV BAR ======= */
 
 header {
   display: flex;
-  align-tems: center;
-  margin: 2em;
+  align-items: center;
+  padding: 1.5em;
+  background-color: #ccb081;
+  color: #fff;
 }
 
-#logo, nav {
+#logo, #spacer, nav {
   flex:1;
 }
+#logo {
+  display: flex;
+  justify-content: flex-end;
+}
+/* this does not work to move "Potato" logo higher to be
+ in line with nav
+#logo h3 {
+    padding-bottom: 20px;
+}
+*/
 
 nav ul {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  align-items: center;
   list-style: none;
+  text-transform: uppercase;
+  font-size: 0.5em;
+}
+
+#buynownav {
+  border: 2px solid #fff;
+  border-radius: 15px;
+  padding: 5px 10px;
+}
+
+/* =========== SPLASH =========== */
+
+.splash {
+  height: 100vh;
+  background-color: #ccb081;
+  color: #fff;
+}
+
+/* ====== ABOUT ====== */
+
+.about {
+  background-color: #d2d6d0;
+  background-image: url("images/about/blur.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  height: 100vh;
+}
+
+.about h1, h2 {
+  font-weight: 300;
+  text-align: center;
+  color: #ffffff;
+}
+.about h1 {
+  padding-top: 2em;
+}
+.about h2 {
+  font-size: 1em;
+}
+ .about img {
+   margin-top: 3.5em;
+   max-width: 70vw;
+ }
+
+ /* ====== NUTRITION ====== */
+
+ .nutrition {
+   background-color: #7c9e69;
+   background-image: url(images/nutrition/blur2.png);
+   background-position: bottom;
+   background-repeat: no-repeat;
+   background-size: contain;
+   height: 100vh;
+ }
+ .nutrition h1, h2 {
+   color: #fff;
+   font-weight: 300;
+ }
+ .nutrition h1 {
+   padding-top: 2em;
+   font-size: 1.5em;
+ }
+ .nutrition h2 {
+   font-size: 0.8em;
+ }
+ #nutritiontext {
+   max-width: 45vw;
+   margin: 0 auto;
+ }
+
+ .nutrition img {
+   max-width: 50vw;
+   padding-top: 3em;
+ }
+
+ /* ====== FEATURES ====== */
+
+ .features {
+   background-color: #ead8ac;
+   height: 100vh;
+   background-image: url("images/features/4.png");
+   background-size: contain;
+   background-position: bottom;
+   background-repeat: no-repeat;
+ }
+ .features h1, h2 {
+   font-weight: 300;
+   color: #8e6f2b;
+ }
+
+ .features h1 {
+   padding-top: 2em;
+   font-size: 1.5em;
+ }
+ .features h2 {
+   font-size: 1em;
+   padding-top: 1em;
+ }
+#featurestext {
+  margin: 0 auto;
+  max-width: 42vw;
+}
+
+/* ===== TESTIMONIALS ===== */
+
+.testimonials {
+  background-image: url("images/testimonials/potatorain.png");
+  height: 100vh;
+  background-size: contain;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+.testimonials h1 {
+  color: #686868;
+  font-weight: 300;
+  padding-top: 2em;
+}
+.testimonialswrapper {
+  /*display: flex;*/
+
+}
+
+/* ==== BUY ===== */
+
+.buy {
+  height: 100vh;
+  background-color: #eee;
+}
+.buy h1 {
+  font-weight: 300;
+  color: #686868;
+  padding-top: 2em;
+}
+.buy-grid {
+  display: flex;
+  width: 80%;
+  margin: 3em auto 0 auto;
+}
+.col-lite, .col-pro, .col-team {
+  flex: 1;
+  justify-content: space-around;
+}
+/*  my thought here was to make each column its own
+flex container for lists, but is this necessary? */
+
+.col-lite {
+  display: flex;
+  flex-direction: column;
+} */
+.col-lite h4 {
+  text-align: center;
+}
+
+.buy button {
+  text-transform: uppercase;
+  border-radius: 15px;
+  padding: 5px 15px;
+  background-color: transparent;
+  color: darkseagreen;
 }
