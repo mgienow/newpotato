@@ -33,12 +33,7 @@ header {
   display: flex;
   justify-content: flex-end;
 }
-/* this does not work to move "Potato" logo higher to be
- in line with nav
-#logo h3 {
-    padding-bottom: 20px;
-}
-*/
+
 
 nav ul {
   display: flex;
@@ -46,7 +41,7 @@ nav ul {
   align-items: center;
   list-style: none;
   text-transform: uppercase;
-  font-size: 0.5em;
+  font-size: 0.65em;
 }
 nav a {
   text-decoration: none;
@@ -307,6 +302,7 @@ width: 50vw;
 #footer_left {
   justify-content: center;
   margin-left: 10em;
+  margin-top: 2em;
 }
 #footer_right{
   justify-content: flex-end;
