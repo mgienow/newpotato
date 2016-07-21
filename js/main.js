@@ -11,7 +11,7 @@ aboutLink.addEventListener('click', function(event) {
 
 var slides = document.querySelectorAll('#quotes .slide');
 var currentSlide = 0;
-var slideInterval = setInterval(nextSlide, 6000);
+var slideInterval = setInterval(nextSlide, 2000);
 
 function nextSlide() {
     slides[currentSlide].className = 'slide';

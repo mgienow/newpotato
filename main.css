@@ -205,7 +205,7 @@ nav a {
   width: 40%;
   /*margin-top: 60%;
 }
-*/
+
 /* ==== BUY ===== */
 #buy {
   background-color: #eee;
@@ -234,10 +234,8 @@ nav a {
   align-items: center;
   color: gray;
 }
-.col-lite ul, .col-pro ul, .col-team ul {
-  flex-grow: 1;
-}
-.col-pro, .col-team {
+
+#buy-grid div+div {
   border-left: 2px solid lightgray;
 }
 /*  ^^^ my thought here was to make each column its own
@@ -245,12 +243,15 @@ flex container for lists*/
 #buy .strong{
   font-weight: bold;
 }
+
 #buy ul {
   text-align: left;
   padding-left: 2em;
   margin: 2em 0 4em 0;
   list-style: none;
   position: relative;
+  max-height: 145px;
+  flex-grow: 1;
 }
 /* POTATO TEAM: BULLETS INSERTED USING SPECIAL HTML
  CHARACTERS IN MARKUP AND STYLED IN CSS*/
@@ -258,9 +259,6 @@ flex container for lists*/
   margin-right: 1em;
   font-size: 1em;
   opacity: .8;
-}
-#buy .delicious{
-  margin-left: 1.5em;
 }
 /* POTATO LITE: BULLETS STYLED USING UNICODE SYMBOLS AND
 li:before PSEUDO ELEMENT */
