@@ -131,7 +131,7 @@ nav a {
  #nutritioninfo sub {
    font-size: 0.5em;
  }
- #numbers {
+ #nutritioninfo ul {
    display: flex;
    flex-direction: row;
    justify-content: space-around;
@@ -142,32 +142,13 @@ nav a {
    color: #fff;
    font-size: 1.5em;
    width: 40%;
+   /*max-height: 20px;*/
 
    margin: 0 auto;
+   padding-bottom: 2em;
  }
-#units {
-  padding-bottom: 2em;
-  max-height: 6px;
-  width: 30%;
 
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  flex-grow: 1;
 
-  list-style: none;
-  color: #fff;
-  font-size: 1.5em;
-  width: 31%;
-  padding-right: 1em;
-
-  margin: 0 auto;
-}
-/*  TRYING TO GET "FAT" TO LINE UP WITH ITS VALUE
-#units li:nth-child(3){
-  margin-left: 10px;
-}*/
  /* ====== FEATURES ====== */
 
  #features {
