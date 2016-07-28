@@ -61,6 +61,10 @@ nav a {
   background-color: #ccb081;
   color: #fff;
 }
+#splash h1 {
+  padding-top: 2em;
+  font-size: 2em;
+}
 #splash h2 {
   color: #fff;
   font-size: 1em;
@@ -109,11 +113,12 @@ nav a {
  }
  #nutrition h1 {
    padding-top: 2em;
-   font-size: 1.5em;
+   font-size: 2em;
  }
  #nutrition h2 {
-   font-size: 0.8em;
+   font-size: 1em;
    color: #fff;
+   padding-top: 0.5em;
  }
  #nutritiontext {
    max-width: 45vw;
@@ -123,7 +128,46 @@ nav a {
  #nutrition img {
    padding-top: 5em;
  }
+ #nutritioninfo sub {
+   font-size: 0.5em;
+ }
+ #numbers {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   align-items: center;
+   flex-grow: 1;
 
+   list-style: none;
+   color: #fff;
+   font-size: 1.5em;
+   width: 40%;
+
+   margin: 0 auto;
+ }
+#units {
+  padding-bottom: 2em;
+  max-height: 6px;
+  width: 30%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+
+  list-style: none;
+  color: #fff;
+  font-size: 1.5em;
+  width: 31%;
+  padding-right: 1em;
+
+  margin: 0 auto;
+}
+/*  TRYING TO GET "FAT" TO LINE UP WITH ITS VALUE
+#units li:nth-child(3){
+  margin-left: 10px;
+}*/
  /* ====== FEATURES ====== */
 
  #features {
@@ -153,54 +197,139 @@ nav a {
 
 /* ===== TESTIMONIALS ===== */
 
-#testimonials {
-  background-image: url("images/testimonials/potatorain.png");
-  width: 100vw;
-  background-size: contain;
-  background-position: bottom;
-  background-repeat: no-repeat;
+
+.wrap {
+  overflow: hidden;
 }
-#testimonials h1 {
-  color: #686868;
-  font-weight: 300;
-  padding-top: 2em;
-}
-/*#quotes {
-  position: relative;
-  height: 40%;
+
+.carousel {
+  display: flex;
+  left: -100%;
   list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  transform: translateX(100%);
 }
-.slide {
-  position: absolute;
-  left: 30%;
-  right: 0px;
-  width: 40%;
-  height: 60%;
-  opacity: 0;
-  z-index: 1;
+@media (min-width: 30em) {
+  .carousel {
+    left: -50%;
+    transform: translateX(50%);
+  }
+}
+@media (min-width: 40em) {
+  .carousel {
+    left: -55%;
+    transform: translateX(33.33333%);
+  }
+}
+
+.carousel.is-reversing {
+  transform: translateX(-100%);
+}
+@media (min-width: 30em) {
+  .carousel.is-reversing {
+    transform: translateX(-50%);
+  }
+}
+@media (min-width: 40em) {
+  .carousel.is-reversing {
+    transform: translateX(-33.333333%);
+  }
+}
+
+.carousel.is-set {
+  transform: none;
+  transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.carousel-seat {
+  flex: 1 0 100%;
+  order: 2;
+}
+.carousel-seat:nth-child(even) {
+  opacity: 0.35;
+}
+@media (min-width: 30em) {
+  .carousel-seat {
+    flex-basis: 50%;
+  }
+}
+@media (min-width: 40em) {
+  .carousel-seat {
+    flex-basis: 33.33333%;
+  }
+}
+
+.carousel-seat.is-ref {
+  order: 1;
+}
 
 
-  -webkit-transition: opacity 1s;
-  -moz-transition: opacity 1s;
-  -o-transition: opacity 1s;
-  transition: opacity 1s;
-  font-size: 1em;
+.carousel {
   font-weight: 300;
-  padding-top: 5em;
-  box-sizing: border-box;
-  background: transparent;
+  color: gray;
+  margin: 0;
+  text-align: center;
+}
+.carousel li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 15em;
+  min-width: 29em;
+  margin-top: 2.5em;
+}
+blockquote {
+  margin-top: 4em;
+}
+.carousel img {
+  width: 80%;
+}
+.carousel footer {
+  margin-bottom: 1em;
+  font-size: 1em;
   color: gray;
 }
-.showing{
+#testimonials {
+    background-image: url("images/testimonials/potatorain.png");
+    background-size:cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    padding: 0;
+}
+
+#testimonials h1 {
+  padding: 2em 0 0.5em 0;
+  text-align: center;
+  font-weight: 300;
+  font-size: 2em;
+  color: silver;
+  margin: 0;
+}
+
+.controls {
+  text-align: center;
+}
+.controls button {
+  background: transparent;
+  border: transparent;
+  opacity: 0.6;
+  font-size: 5em;
+  font-weight: 100;
+  color: gray;
+  cursor: pointer;
+  outline: none;
+  padding: 0 1em 0 1em;
+}
+.controls button:visited {
+  opacity: 0.6;
+}
+.controls button:hover, .controls button:focus {
   opacity: 1;
-  z-index: 2;
 }
-
-#border {
-  width: 40%;
-  /*margin-top: 60%;
-}
-
 /* ==== BUY ===== */
 #buy {
   background-color: #eee;

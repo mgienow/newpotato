@@ -4,6 +4,7 @@
   <title>New Potato Caboose</title>
   <link rel="stylesheet" href= "main.css">
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:100,300,400italic,400,500,700' rel='stylesheet' type='text/css'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <link rel="icon" href="images/icon.png">
 </head>
 
@@ -21,7 +22,7 @@
         <ul>
           <li><a href="#about">About</a></li>
           <li><a href="#features">Features</a></li>
-          <li><a href="#NUTRITION">Nutrition</a></li>
+          <li><a href="#nutrition">Nutrition</a></li>
           <li><a href="#testimonials">Testimonials</a></li>
           <li id="buynownav"><a href="#buy">Buy Now!</a></li>
         </ul>
@@ -52,7 +53,25 @@
     <h2>The majority of carbohydrates in potatoes are complex carbohydrates,
       your body's main energy source.</h2>
     </div>
-    <img src="images/nutrition/potatoinfo.png">
+    <img src="images/nutrition/potatoinfo2.png">
+    <div id="nutritioninfo">
+    <ul id="numbers">
+      <!--<li>110<br><sub>calories</sub></li>
+      <li>26g<br><sub>carbohydrate</sub></li>
+      <li>3g<br><sub>protein</sub></li>
+      <li>0g<br><sub>  fat</sub></li> -->
+      <li>110</li>
+      <li>26g</li>
+      <li>3g</li>
+      <li>0g</li>
+    </ul>
+    <ul id="units">
+      <li><sub> calories </sub></li>
+      <li><sub>carbohydrate</sub></li>
+      <li><sub>protein </sub></li>
+      <li><sub>fat  </sub></li>
+    </ul>
+  </div>
   </section>
 
 <!-- ===== FEATURES ===== -->
@@ -66,17 +85,68 @@
   </section>
 
  <!-- ==== TESTIMONIALS ==== -->
-<section id="testimonials">
-    <h1>100% Customer satisfaction!</h1>
-    <ul id="quotes">
-      <li class= "slide showing">"I was skeptical at first, but when I tried <strong><span class="strong">Potato&trade;</span></strong> for the first time, my life completely changed! I'm a better person now. Everything is better with <strong><span class="strong">Potato&trade;</span></strong>."</li>
-      <li class="slide">"<strong><span class="strong">Potato&trade;</span></strong> brought joy and meaning to my previously empty life. Also, I was completely bald, but <strong><span class="strong">Potato&trade;</span></strong> made all my hair grow back!"</li>
-      <li class="slide">"Transformational innovation strategies like <strong><span class="strong">Potato&trade;</span></strong> disrupt the static root vegetable space and reinvent value-added imperatives while intrinsically envisioneering cross-platform functionalities. Plus, they're super yummy!"</li>
-      <li class="slide">"<strong><span class="strong">Potato&trade;</span></strong> -- who knew? Nothing else comes close. Even just saying it makes my heart sing with joy -- Potato! Potato! Potato!" </li>
-      <li class="slide">"I went into this thinking that I knew all there was to know about tubers. But <strong><span class="strong">Potato&trade;</span></strong> made me realize there is so much more to know -- and love - about root vegetables. Truly humbling."</li>
-    </ul>
-    <img id="border" src="images/testimonials/border.png" />
-  </section>
+ <section id="testimonials">
+   <h1>100% Customer Satisfaction!</h1>
+     <!-- ATTEMPT TO LAY OUT BUTTONS BETWEEN QUOTES IN CAROUSEL
+       <div class='new-controls'>
+         <button class="slider previous">&lt;</button>
+         <button class="slider next">&gt;</button>
+       </div> -->
+ <div class='wrap'>
+   <ul class='carousel is-set'>
+     <li class='carousel-seat'>
+
+         <blockquote>"I was skeptical at first, but when I
+         tried <strong>Potato</strong>&trade; for the first
+         time my life completely changed! I'm a better person now.
+         Everything is better with <strong>Potato</strong>&trade;."</blockquote>
+         <img src="images/testimonials/border.png" />
+         <footer id="footer1"><strong>Jane Doe</strong>, single mom</footer>
+
+     </li>
+     <li class='carousel-seat'>
+         <blockquote><strong><span class="strong">Potato&trade;</span></strong>
+         brought joy and meaning to my previously empty life. Also,
+         I was completely bald, but <strong><span class="strong">Potato&trade;</span></strong>
+          made all my hair grow back!"</blockquote>
+         <img src="images/testimonials/border.png" />
+         <footer><strong>John Q. Lonely</strong>, public servant</footer>
+     </li>
+
+     <li class='carousel-seat'>
+       <blockquote>"Transformational strategies like <strong>
+         <span class="strong">Potato&trade;</span></strong>
+         disrupt the root vegetable space while envisioneering
+         cross-platform functionalities.
+         Plus, they're super yummy!"</blockquote>
+         <img src="images/testimonials/border.png" />
+         <footer><strong>Monica Vapid</strong>, branding consultant</footer>
+     </li>
+
+     <li class='carousel-seat'>
+       <blockquote><strong><span class="strong">Potato&trade;</span></strong>
+          -- who knew?! <br> Nothing else comes close. Even just saying it makes
+         my heart sing with joy -- Potato! Potato! Potato!" </blockquote>
+         <img src=images/testimonials/border.png />
+         <footer><strong>Don Quixote</strong>, professional windmill tilter</footer>
+     </li>
+
+     <li class='carousel-seat'>
+         <blockquote>"I thought I knew all there
+         was to know about tubers. But <strong><span class="strong">
+         Potato&trade;</span></strong> made me realize there is so much more to know -- and love -
+         about root vegetables. Truly humbling."</blockquote>
+         <img src="images/testimonials/border.png" />
+         <footer><strong>Euell Gibbons</strong>, authentic wildman</footer>
+     </li>
+   </ul>
+ </div>
+
+ <div class='controls'>
+   <button class='toggle'>&lt;</button>
+   <button class='toggle' data-toggle='next'>&gt;</button>
+ </div>
+ </section>
   <!-- ==== BUY === -->
   <section id="buy">
     <h1>Order one (or more) today!</h1>
